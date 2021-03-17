@@ -1,0 +1,11 @@
+FROM python:3.8
+
+ENV Dir_target /usr/src/app/
+
+RUN  mkdir -p "${Dir_target}"
+ 
+WORKDIR "${Dir_target}"
+
+COPY lab1.py "${Dir_target}"
+
+CMD ["python3","lab1.py"]
